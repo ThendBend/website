@@ -16,7 +16,7 @@ function fileLoaded(file){
 	str = split(senten, '.');
 	select("#paradive").html("Press Enter to dive deeper into Hogwarts.");
 	select("#paratype").html("Type something you like about Harry Potter:");
-	inputText = createInput();
+	inputText = select("#input-text");
 	inputText.elt.focus();
 	inputText.input(function lel(){
 		a = 0;
@@ -26,6 +26,7 @@ function fileLoaded(file){
 	});
 	output = select("#para");
 	loading = false;
+	select(".all-text").style("display:inherit;");
 }
 
 function progress(percent) {
@@ -51,7 +52,6 @@ function draw() {
 	}else {
 		createCanvas(windowWidth,windowHeight - 70);
 		background(248, 236, 194);
-		inputText.position((windowWidth / 2) - 80, (windowHeight / 2) - 113);
 	}
 }
 
