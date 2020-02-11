@@ -1,8 +1,9 @@
 Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
-ErrorDocument 404 ./404err.html
-ErrorDocument 403 ./404err.html
-RewriteEngine On
-RewriteRule (.*)index.html$ /$1 [R=301,L]
+ErrorDocument 404 /404err.html
+ErrorDocument 403 /404err.html
+ErrorDocument 405 /404err.html
+ErrorDocument 400 /404err.html
+ErrorDocument 401 /404err.html
 # Expires Headers - 2678400s = 31 days
 <ifmodule mod_expires.c>
   ExpiresActive On
